@@ -1,14 +1,11 @@
-import { useMarkdownEditor } from './hooks/useMarkdownEditor'
+import { Editor } from './components/Editor';
 
 function App() {
-  const { editor } = useMarkdownEditor()
   return (
     <div className='p-6 w-full h-screen bg-gray-300'>
-      <div className='bg-white rounded-r-lg rounded-l-lg'>
-        <div ref={editor} />
-      </div>
+      <Editor />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
