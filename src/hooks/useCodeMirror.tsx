@@ -12,7 +12,7 @@ export type UseCodeMirrorReturnType = {
 };
 
 export const useCodeMirror = ({ defaultValue = '', extensions = [] }: UseCodeMirrorProps): UseCodeMirrorReturnType => {
-  const editor = useRef(null);
+  const editor = useRef<HTMLDivElement | null>(null);
   const [container, setContainer] = useState<HTMLDivElement>();
   const [editorView, setEditorView] = useState<EditorView>();
 
