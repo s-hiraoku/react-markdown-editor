@@ -1,4 +1,4 @@
-import { useCodeMirror } from '../hooks/useCodeMirror';
+import { useCodeMirror } from '../../hooks/useCodeMirror';
 
 export const Editor: React.FC = () => {
   const { editor } = useCodeMirror({});
