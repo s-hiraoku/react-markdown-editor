@@ -1,9 +1,9 @@
-import { Editor } from './components/Editor';
+import { MarkdownEditor } from './components/MarkdownEditor';
 
 function App() {
   return (
     <div className='p-6 w-full h-screen bg-gray-300'>
-      <Editor />
+      <MarkdownEditor />
     </div>
   );
 }
