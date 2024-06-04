@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["codemirror", "tailwindcss"],
+  "cSpell.words": ["codemirror", "keymap", "tailwindcss"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {

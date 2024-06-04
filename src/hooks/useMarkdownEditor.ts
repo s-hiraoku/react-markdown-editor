@@ -1,3 +1,6 @@
+import { defaultKeymap } from '@codemirror/commands';
+import type { Extension } from '@codemirror/state';
+import { EditorView, keymap, lineNumbers } from '@codemirror/view';
 import { useCodeMirror } from './useCodeMirror';
 
 export type UseMarkdownEditorProps = {
@@ -13,7 +16,13 @@ export const useMarkdownEditor = ({
   defaultValue = '',
   onUpdated,
 }: UseMarkdownEditorProps): UseMarkdownEditorReturnType => {
-  const { editor } = useCodeMirror({ defaultValue, extensions: [], onUpdated });
+  const extensions: Extension[] = [
+    keymap.of(defaultKeymap),
+    EditorView.baseTheme({ '&': { height: '95dvh' } }),
+    lineNumbers(),
+  ];
+
+  const { editor } = useCodeMirror({ defaultValue, extensions, onUpdated });
 
   return {
     editor,
