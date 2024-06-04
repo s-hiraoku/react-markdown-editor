@@ -17,7 +17,7 @@ export const useCodeMirror = ({
   extensions = [],
   onUpdated,
 }: UseCodeMirrorProps): UseCodeMirrorReturnType => {
-  const editor = useRef<HTMLDivElement | null>(null);
+  const editor = useRef<HTMLDivElement | null>(null);  // EditorViewの親要素のref
   const [container, setContainer] = useState<HTMLDivElement>();
   const [editorView, setEditorView] = useState<EditorView>();
 
